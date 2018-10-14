@@ -13,7 +13,7 @@ for i=1:N
     [GpadeA(i),Rho(i)]=analyticSpectrumFunction( 0, xPade(i));
     disp(i);
 end
- 
+
 
 rng(R);
 
@@ -23,6 +23,9 @@ for i=1:N
     z(i)=xPade(i)*1i;
     u(i)=(GpadeA(i) + Rho(i)*1i)*(1.0+ (normrnd(0,sig)+normrnd(0,sig)*1i));
 end
+
+
+% u and z is the input here.
 
 [A,B]=VandermondePoly(z,u);
 
@@ -34,7 +37,7 @@ Rho=PadeReal;
 for i=1:size(PadeReal,1)*size(PadeReal,2)
      Rho(i)=imag(VandermondePolyEvaluate(PadeReal(i)  ,A,B))/(-pi);
 
-    disp(i);
+%     disp(i);
 end
 
 output=Rho;

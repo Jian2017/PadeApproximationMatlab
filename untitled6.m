@@ -13,7 +13,7 @@ for i=1:N
     disp(i);
 end
 
-sig=0.0001;
+sig=0.01;
 
 z=zeros(N,1);
 u=z;

@@ -23,6 +23,9 @@ else
     nb=na-1;
 end
 
+% na=6;
+% nb=8;
+
 M=zeros(N,N);
 
 if size(z,1)<size(z,2)
